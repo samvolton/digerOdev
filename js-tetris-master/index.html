@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Tetris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="character-select">
+      <h1>Election Tetris</h1>
+      <h2>Choose your candidate:</h2>
+      <button onclick="selectCandidate('biden')" class="biden-btn">Play as Biden</button>
+      <button onclick="selectCandidate('trump')" class="trump-btn">Play as Trump</button>
+  </div>
+
+  <div id="game-board" style="display: none;">
+      <canvas id="board" class="game-board"></canvas>
+      <div class="right-column">
+          <div>
+              <h1>ELECTION TETRIS</h1>
+              <p>Score: <span id="score">0</span></p>
+              <p>Lines: <span id="lines">0</span></p>
+              <p>Level: <span id="level">0</span></p>
+              <canvas id="next" class="next"></canvas>
+          </div>
+          <button id="play-btn" onclick="play()" class="play-button">Play</button>
+          <button id="pause-btn" onclick="pause()" class="pause-button" style="display: none;">Pause</button>
+      </div>
+  </div>
+
+  <div id="global-scores">
+      <h3>Global Scores:</h3>
+      <p>Biden: <span id="biden-score">0</span></p>
+      <p>Trump: <span id="trump-score">0</span></p>
+  </div>
+
+  <div id="notification" style="display: none;"></div>
+
+  <div id="instructions">
+    <h3>How to Play:</h3>
+    <p>Left Arrow: Move Left</p>
+    <p>Right Arrow: Move Right</p>
+    <p>Down Arrow: Soft Drop</p>
+    <p>Up Arrow: Rotate</p>
+    <p>Spacebar: Hard Drop</p>
+    <p>P: Pause/Resume</p>
+  </div>
+
+  <script src="constants.js"></script>
+  <script src="board.js"></script>
+  <script src="piece.js"></script>
+  <script src="main.js"></script>
+  <script src="gameState.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          loadGlobalScores();
+      });
+  </script>
+</body>
+</html>

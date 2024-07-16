@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  width: 300px;
+  padding: 20px;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.save-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.article-list {
+  text-align: left;
+}
+
+.article-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.article-list li {
+  margin-bottom: 10px;
+}
+
+.article-date {
+  font-size: 0.8em;
+  color: #666;
+  margin-left: 10px;
+}
+
+.focus-coins {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
